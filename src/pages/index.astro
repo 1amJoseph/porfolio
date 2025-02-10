@@ -1,5 +1,34 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import Topnav from "../components/Topnav.astro";
+import Socialpill from "../components/Socialpill.astro";
+
+import LinkedinIcon from "../components/icon/LinkedinIcon.astro";
 ---
 
-<Layout />
+<Layout>
+  <Topnav />
+  <section class="flex max-w-[90%] mt-40 mx-auto justify-between">
+    <section class="max-w-[40%] ml-[3.5%]">
+      <h2 class="text-5xl">Hey, I'm <span class="font-bold">Joseph!</span></h2>
+      <p class="max-w-[80%] text-2xl text-pretty mt-12">
+        Software development student, specialized in fronted and backend.
+      </p>
+      <ul class="flex mt-4">
+        <Socialpill
+          href="https://www.linkedin.com/in/joseph-oluwatobi-oluwadare-0b0b3b1b3/"
+        >
+          <LinkedinIcon class="size-4" />
+          <span>Linkedin</span>
+        </Socialpill>
+      </ul>
+    </section>
+    <section class="mr-[3.5%]">
+      <p
+        class="text-base text-stone-600 font-semibold max-w-[75%] justify-center hover:text-stone-300 transition flex mt-4"
+      >
+        "if u can imagine it, u can program it."
+      </p>
+    </section>
+  </section>
+</Layout>
