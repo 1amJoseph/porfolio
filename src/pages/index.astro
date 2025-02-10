@@ -1,34 +1,51 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Topnav from "../components/Topnav.astro";
+import Badge from "../components/Badge.astro";
 import Socialpill from "../components/Socialpill.astro";
 
-import LinkedinIcon from "../components/icon/LinkedinIcon.astro";
+import GithubIcon from "../components/icon/GithubIcon.astro";
+import LinkedIn from "../components/icon/LinkedIn.astro";
+import EmailIcon from "../components/icon/EmailIcon.astro";
+import FreelanceIcon from "../components/icon/FreelanceIcon.astro";
 ---
 
 <Layout>
   <Topnav />
-  <section class="flex max-w-[90%] mt-40 mx-auto justify-between">
-    <section class="max-w-[40%] ml-[3.5%]">
-      <h2 class="text-5xl">Hey, I'm <span class="font-bold">Joseph!</span></h2>
-      <p class="max-w-[80%] text-2xl text-pretty mt-12">
-        Software development student, specialized in fronted and backend.
-      </p>
-      <ul class="flex mt-4">
-        <Socialpill
-          href="https://www.linkedin.com/in/joseph-oluwatobi-oluwadare-0b0b3b1b3/"
-        >
-          <LinkedinIcon class="size-4" />
-          <span>Linkedin</span>
-        </Socialpill>
-      </ul>
-    </section>
-    <section class="mr-[3.5%]">
-      <p
-        class="text-base text-stone-600 font-semibold max-w-[75%] justify-center hover:text-stone-300 transition flex mt-4"
+  <main class="px-4">
+    <section class="w-[90%] lg:w-[740px] mx-auto xl:w-[90%] py-44">
+      <h1
+        class="text-white text-3xl md:text-4xl lg:text-5xl font-bold sm:flex pb-6 lg:pb-10 sm:flex-row gap-x-4 flex-col"
       >
-        "if u can imagine it, u can program it."
-      </p>
+        Hey, soy Joseph <div
+          class="flex justify-start mt-4 sm:mt-0 sm:justify-center items-center"
+        >
+          <Badge>Disponible</Badge>
+        </div>
+      </h1>
+      <h2 class="lg:text-2xl opactiy-80 text-pretty max-w-[700px] sm:text-xl">
+        Estudiante de la carrera Desarrollo de Software, Programador Backend y
+        Frontend, Especializado en creacion de API's.
+      </h2>
+
+      <nav class="flex gap-2 mt-8 flex-wrap">
+        <Socialpill>
+          <GithubIcon class="size-4 md:size-6" />
+          <span>Github</span>
+        </Socialpill>
+        <Socialpill>
+          <LinkedIn class="size-4 md:size-6" />
+          <span>LinkedIn</span>
+        </Socialpill>
+        <Socialpill>
+          <FreelanceIcon class="size-4 md:size-6" />
+          <span>Freelance</span>
+        </Socialpill>
+        <Socialpill>
+          <EmailIcon class="size-4 md:size-6" />
+          <span>Joseph.dev.cigarettes@gmail.com</span>
+        </Socialpill>
+      </nav>
     </section>
-  </section>
+  </main>
 </Layout>
