@@ -3,6 +3,7 @@ import Layout from "../layouts/Layout.astro";
 import Topnav from "../components/Topnav.astro";
 import Badge from "../components/Badge.astro";
 import Socialpill from "../components/Socialpill.astro";
+import Proyects from "../components/Proyects.astro";
 
 import GithubIcon from "../components/icon/GithubIcon.astro";
 import LinkedIn from "../components/icon/LinkedIn.astro";
@@ -12,8 +13,8 @@ import FreelanceIcon from "../components/icon/FreelanceIcon.astro";
 
 <Layout>
   <Topnav />
-  <main class="px-4">
-    <section class="w-[90%] lg:w-[740px] mx-auto xl:w-[90%] py-44">
+  <main class="px-4 pt-32">
+    <section class="w-[90%] lg:w-[740px] mx-auto xl:w-[90%] py-32">
       <h1
         class="text-white text-3xl md:text-4xl lg:text-5xl font-bold sm:flex pb-6 lg:pb-10 sm:flex-row gap-x-4 flex-col"
       >
@@ -24,16 +25,16 @@ import FreelanceIcon from "../components/icon/FreelanceIcon.astro";
         </div>
       </h1>
       <h2 class="lg:text-2xl opactiy-80 text-pretty max-w-[700px] sm:text-xl">
-        Estudiante de la carrera Desarrollo de Software, Programador Backend y
-        Frontend, Especializado en creacion de API's.
+        Estudiante de la carrera Desarrollo de Software, Programador Backend &
+        Database SQL, Especializado en creacion de API's.
       </h2>
 
       <nav class="flex gap-2 mt-8 flex-wrap">
-        <Socialpill>
+        <Socialpill href="https://github.com/1amJoseph">
           <GithubIcon class="size-4 md:size-6" />
           <span>Github</span>
         </Socialpill>
-        <Socialpill>
+        <Socialpill href="https://www.linkedin.com/in/josephherrera1/">
           <LinkedIn class="size-4 md:size-6" />
           <span>LinkedIn</span>
         </Socialpill>
@@ -42,14 +43,16 @@ import FreelanceIcon from "../components/icon/FreelanceIcon.astro";
           <span>Freelance</span>
         </Socialpill>
         <Socialpill>
-          <EmailIcon class="size-4 md:size-6" />
-          <span>bedroom.n.cigarettes@gmail.com</span>
+          <EmailIcon
+            class="size-4 md:size-6"
+            alt="bedroom.n.cigarettes@gmail.com"
+          />
+          <span>Email</span>
         </Socialpill>
       </nav>
     </section>
+    <section class="w-[90%] lg:w-[740px] mx-auto xl:w-[90%]">
+      <Proyects />
+    </section>
   </main>
-  <article>
-    <h2>Experiencia</h2>
-  </article>
-  <footer class="bg-[#0c0c0c] h-full w-full">Aqui va el footer</footer>
 </Layout>
