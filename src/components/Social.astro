@@ -1,0 +1,26 @@
+---
+import GithubIcon from "../components/icon/GithubIcon.astro";
+import LinkedIn from "../components/icon/LinkedIn.astro";
+import EmailIcon from "../components/icon/EmailIcon.astro";
+import FreelanceIcon from "../components/icon/FreelanceIcon.astro";
+import Socialpill from "../components/Socialpill.astro";
+
+import links from "../../config.json";
+---
+
+<Socialpill href={links.links.github}>
+  <GithubIcon class="size-4 md:size-6" />
+  <span>Github</span>
+</Socialpill>
+<Socialpill href={links.links.linkedin}>
+  <LinkedIn class="size-4 md:size-6" />
+  <span>LinkedIn</span>
+</Socialpill>
+<Socialpill>
+  <FreelanceIcon class="size-4 md:size-6" />
+  <span>Freelance</span>
+</Socialpill>
+<Socialpill>
+  <EmailIcon class="size-4 md:size-6" alt={links.links.email} />
+  <span>Email</span>
+</Socialpill>

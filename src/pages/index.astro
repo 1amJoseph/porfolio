@@ -1,54 +1,19 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Topnav from "../components/Topnav.astro";
-import Badge from "../components/Badge.astro";
-import Socialpill from "../components/Socialpill.astro";
 import Proyects from "../components/Proyects.astro";
 
-import GithubIcon from "../components/icon/GithubIcon.astro";
-import LinkedIn from "../components/icon/LinkedIn.astro";
-import EmailIcon from "../components/icon/EmailIcon.astro";
-import FreelanceIcon from "../components/icon/FreelanceIcon.astro";
+import Presentation from "../components/Presentation.astro";
+import Social from "../components/Social.astro";
 ---
 
 <Layout>
   <Topnav />
   <main class="px-4 pt-32">
     <section class="w-[90%] lg:w-[740px] mx-auto xl:w-[90%] py-32">
-      <h1
-        class="text-white text-3xl md:text-4xl lg:text-5xl font-bold sm:flex pb-6 lg:pb-10 sm:flex-row gap-x-4 flex-col"
-      >
-        Hey, soy Joseph <div
-          class="flex justify-start mt-4 sm:mt-0 sm:justify-center items-center"
-        >
-          <Badge>Disponible</Badge>
-        </div>
-      </h1>
-      <h2 class="lg:text-2xl opactiy-80 text-pretty max-w-[700px] sm:text-xl">
-        Estudiante de la carrera Desarrollo de Software, Programador Backend &
-        Database SQL, Especializado en creacion de API's.
-      </h2>
-
+      <Presentation />
       <nav class="flex gap-2 mt-8 flex-wrap">
-        <Socialpill href="https://github.com/1amJoseph">
-          <GithubIcon class="size-4 md:size-6" />
-          <span>Github</span>
-        </Socialpill>
-        <Socialpill href="https://www.linkedin.com/in/josephherrera1/">
-          <LinkedIn class="size-4 md:size-6" />
-          <span>LinkedIn</span>
-        </Socialpill>
-        <Socialpill>
-          <FreelanceIcon class="size-4 md:size-6" />
-          <span>Freelance</span>
-        </Socialpill>
-        <Socialpill>
-          <EmailIcon
-            class="size-4 md:size-6"
-            alt="bedroom.n.cigarettes@gmail.com"
-          />
-          <span>Email</span>
-        </Socialpill>
+        <Social />
       </nav>
     </section>
     <section class="w-[90%] lg:w-[740px] mx-auto xl:w-[90%]">

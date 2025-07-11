@@ -1,28 +1,59 @@
-<header
-  class="fixed flex justify-between items-center py-3 w-full bg-white/1 px-12 backdrop-blur-xs"
->
-  <img src="/pfp.webp" alt="Joseph photo" class="rounded-full size-12" />
+<header class="fixed w-full">
+  <div
+    id="topnav"
+    class="flex justify-between w-full items-center py-2 px-10 transition-all max-w-screen duration-300 mx-auto ease-in-out border-transparent"
+  >
+    <img src="/pfp.webp" alt="Joseph photo" class="rounded-full size-12" />
 
-  <nav class="flex flex-row text-sm sm:text-base gap-x-4 sm:gap-x-8">
-    <a
-      href="#"
-      class="text-slate-50 opacity-80 hover:opacity-100 transition hover:scale-105"
-      >Home</a
-    >
-    <a
-      href="#About"
-      class="text-slate-50 opacity-80 hover:opacity-100 transition hover:scale-105"
-      >About</a
-    >
-    <a
-      href="#Proyects"
-      class="text-slate-50 opacity-80 hover:opacity-100 transition hover:scale-105"
-      >Proyectos</a
-    >
-    <a
-      href="#Contact"
-      class="text-slate-50 opacity-80 hover:opacity-100 transition hover:scale-105"
-      >Contact</a
-    >
-  </nav>
+    <nav class="flex flex-row text-sm sm:text-base gap-x-4 sm:gap-x-8">
+      <a
+        href="#"
+        class="text-slate-50 opacity-80 hover:opacity-100 transition hover:scale-105"
+        >Home</a
+      >
+      <a
+        href="#About"
+        class="text-slate-50 opacity-80 hover:opacity-100 transition hover:scale-105"
+        >About</a
+      >
+      <a
+        href="#Proyects"
+        class="text-slate-50 opacity-80 hover:opacity-100 transition hover:scale-105"
+        >Proyectos</a
+      >
+      <a
+        href="#Contact"
+        class="text-slate-50 opacity-80 hover:opacity-100 transition hover:scale-105"
+        >Contact</a
+      >
+    </nav>
+  </div>
 </header>
+
+<script is:inline>
+  const topnav = document.getElementById(`topnav`);
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 20) {
+      topnav.classList.remove("w-full");
+      topnav.classList.add(
+        "w-[98%]",
+        "backdrop-blur-xs",
+        "translate-y-2",
+        "bg-white/2",
+        "border",
+        "border-white/5",
+        "rounded-xl"
+      );
+    } else {
+      topnav.classList.add("w-full");
+      topnav.classList.remove(
+        "backdrop-blur-xs",
+        "translate-y-2",
+        "bg-white/2",
+        "border",
+        "border-white/5",
+        "rounded-xl"
+      );
+    }
+  });
+</script>
