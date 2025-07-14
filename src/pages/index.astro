@@ -5,19 +5,40 @@ import Proyects from "../components/Proyects.astro";
 
 import Presentation from "../components/Presentation.astro";
 import Social from "../components/Social.astro";
+import Experience from "../components/experience.astro";
+import Posts from "../components/Posts.astro";
+
+const tecnologias = [
+  { name: "JavaScript", icon: "/icons/javascript.svg" },
+  { name: "Java", icon: "/icons/java.svg" },
+  { name: "Python", icon: "/icons/python.svg" },
+  { name: "C++", icon: "/icons/c-plusplus.svg" },
+  { name: "React", icon: "/icons/react.svg" },
+  { name: "Astro", icon: "/icons/astro.svg" },
+  { name: "MySQL", icon: "/icons/mysql.svg" },
+  { name: "Tailwind", icon: "/icons/tailwindcss.svg" },
+  { name: "Express", icon: "/icons/expressjs_dark.svg" },
+  { name: "Git", icon: "/icons/git.svg" },
+];
 ---
 
 <Layout>
   <Topnav />
-  <main class="px-4 pt-32">
+  <main id="Home" class="px-4 pt-32 fade-slide-up">
     <section class="w-[90%] lg:w-[740px] mx-auto xl:w-[90%] py-32">
       <Presentation />
       <nav class="flex gap-2 mt-8 flex-wrap">
         <Social />
       </nav>
     </section>
+    <section>
+      <Experience tecnologias={tecnologias} />
+    </section>
     <section class="w-[90%] lg:w-[740px] mx-auto xl:w-[90%]">
       <Proyects />
+    </section>
+    <section class="w-[90%] lg:w-[740px] mx-auto xl:w-[90%]">
+      <Posts />
     </section>
   </main>
 </Layout>

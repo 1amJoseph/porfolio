@@ -26,19 +26,19 @@ const proyectos = [
 ];
 ---
 
-<section id="Proyects" class="py-12 px-4 md:px-8 text-white">
-  <h2 class="text-3xl font-bold mb-8">Proyectos Destacados</h2>
-  <div class="grid lg:grid-cols-2 xl:grid-cols-3 gap-8">
+<section id="Proyects" class="py-32 px-4 md:px-8 text-white">
+  <h2 class="text-3xl xl:text-4xl font-bold mb-8">Proyectos Destacados</h2>
+  <div class="grid lg:grid-cols-2 xl:grid-cols-3 sm:mx-20 lg:mx-0 gap-8">
     {
       proyectos.map((proyecto) => (
-        <div class="bg-[#252a32] p-6 rounded-2xl shadow hover:shadow-xl transition">
-          <h3 class="text-2xl font-semibold mb-2">{proyecto.title}</h3>
-          <p class="text-gray-300 mb-4">{proyecto.description}</p>
+        <div class="bg-white/5 border border-white/5 p-6 rounded-2xl shadow hover:shadow-xl ">
           <img
             src={proyecto.image}
             alt={`Imagen de ${proyecto.title}`}
             class="w-full max-h-64 object-contain rounded-md mb-4"
           />
+          <h3 class="text-2xl font-semibold mb-2">{proyecto.title}</h3>
+          <p class="text-gray-300 mb-4">{proyecto.description}</p>
           <div class="text-sm text-gray-400 mb-4">
             <span class="font-semibold text-gray-300">Tecnologías:</span>{" "}
             {proyecto.tecnologies.join(" · ")}
