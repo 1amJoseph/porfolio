@@ -17,15 +17,17 @@ const postsWithContent = await Promise.all(
 ---
 
 <section class="xl:mx-20 xl:py-32" id="Posts">
-  <h1 class="text-4xl font-bold mb-6 text-center">Mis Posts</h1>
+  <h1 class="text-4xl font-bold mb-6 text-white text-center">Mis Posts</h1>
 
   {
     postsWithContent.map(({ post, Content }) => (
       <div class=" my-4 w-full xl:w-[75%] border shadow md:w-[65%] mx-auto border-white/10 bg-white/5 backdrop-blur-lg px-2 py-8 xl:p-8 rounded-2xl">
         <article class=" w-[95%] sm:w-[90%] mx-auto border-b border-b-white/25 py-4">
-          <h2 class="text-xl xl:text-3xl  font-semibold">{post.data.title}</h2>
+          <h2 class="text-xl xl:text-3xl text-white font-semibold">
+            {post.data.title}
+          </h2>
           <p class="text-sm italic  pb-8 text-gray-400">{post.data.date}</p>
-          <div class="mb-4">
+          <div class="text-white mb-4">
             <Content />
           </div>
         </article>
